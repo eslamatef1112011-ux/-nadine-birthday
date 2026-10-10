@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#21152f">
+<title>هدية عيد ميلاد نادين ❤️</title>
+<style>
+:root{--pink:#ff6fae;--rose:#ffb6d2;--purple:#6d3b91;--cream:#fff7fb;--ink:#351c45}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Tahoma,Arial,sans-serif;background:linear-gradient(135deg,#24152f,#54245f 55%,#9c3e77);color:var(--cream);min-height:100vh;overflow-x:hidden}
+button{font:inherit;cursor:pointer}
+.screen{min-height:100svh;padding:28px 18px;display:none;align-items:center;justify-content:center;text-align:center;position:relative}
+.screen.active{display:flex}
+.panel{width:min(100%,720px);margin:auto;padding:clamp(24px,5vw,48px);border:1px solid #ffffff3d;border-radius:28px;background:#ffffff12;backdrop-filter:blur(10px);box-shadow:0 18px 55px #10071966}
+.kicker{letter-spacing:1px;color:#ffd4e6;font-size:.95rem}
+h1{font-size:clamp(2rem,8vw,4.2rem);line-height:1.35;margin:14px 0}
+h2{font-size:clamp(1.7rem,6vw,2.7rem);margin:0 0 16px}
+p{font-size:clamp(1.05rem,3.8vw,1.3rem);line-height:2}
+.big-heart{font-size:clamp(4rem,18vw,8rem);animation:beat 1.15s infinite;display:block;filter:drop-shadow(0 0 18px #ff77b4)}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+.btn{border:0;border-radius:999px;padding:14px 25px;margin:8px;background:linear-gradient(100deg,#ff78b4,#ffb0ce);color:#431b43;font-weight:bold;box-shadow:0 8px 20px #12051d55;transition:transform .2s}
+.btn:active{transform:scale(.97)}
+.btn.secondary{background:#ffffff1c;color:white;border:1px solid #ffffff60}
+.note{font-size:.95rem;color:#ffe3ef}
+.gift-box{font-size:5.2rem;display:block;animation:bob 2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-12px) rotate(3deg)}}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:14px;margin:24px 0}
+.surprise{border:1px solid #ffffff45;border-radius:20px;background:#ffffff12;padding:20px;min-height:145px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+.surprise .emoji{font-size:2.5rem}
+.surprise button{background:transparent;color:white;border:1px solid #ffd4e6;border-radius:30px;padding:9px 16px}
+.reveal{display:none;color:#ffe1ed;line-height:1.9}
+.reveal.show{display:block}
+.progress{position:fixed;top:0;right:0;height:4px;width:0;background:#ffb6d2;z-index:20;transition:width .3s}
+.floating{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.float{position:absolute;bottom:-40px;animation:rise linear forwards;opacity:.8}
+@keyframes rise{to{transform:translateY(-115vh) rotate(360deg);opacity:0}}
+.screen .panel{position:relative;z-index:1}
+.footer{margin-top:22px;color:#ffd8e8;font-size:.95rem}
+.wish{background:#fff8fc;color:#6b2c57;border-radius:20px;padding:22px;margin:18px auto;max-width:560px;font-size:1.2rem;line-height:2}
+.signature{font-size:clamp(1.5rem,6vw,2.4rem);font-weight:bold;color:#ffe0ed;line-height:1.8}
+.small{font-size:.9rem;opacity:.85}
+@media(max-width:420px){.panel{padding:24px 17px}.btn{width:100%;margin:7px 0}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="floating" id="floating"></div>
+
+<section class="screen active" id="s1">
+ <div class="panel">
+  <span class="kicker">🎀 مفاجأة صغيرة لقلب كبير 🎀</span>
+  <span class="gift-box">🎁</span>
+  <h1>كل سنة وإنتِ طيبة يا نادين ❤️</h1>
+  <p>عملتلك هدية مخصوص علشان يومك يبقى مليان فرحة وضحكة وحاجات حلوة شبه قلبك.</p>
+  <p class="note">جاهزة تفتحي هديتك؟ ✨</p>
+  <button class="btn" onclick="go(2)">افتحي هديتك 🎁</button>
+  <div class="footer">من قلبي لقلبك 💗</div>
+ </div>
+</section>
+
+<section class="screen" id="s2">
+ <div class="panel">
+  <span class="big-heart">💖</span>
+  <h2>النهارده يوم مميز!</h2>
+  <p>مش مجرد عيد ميلاد… دي فرصة أقولك إنك تستاهلي كل حاجة جميلة في الدنيا، وإن السنة الجديدة من عمرك تكون أحنّ وأجمل وأخف على قلبك.</p>
+  <button class="btn" onclick="go(3)">كمّلي المفاجآت ✨</button>
+ </div>
+</section>
+
+<section class="screen" id="s3">
+ <div class="panel">
+  <h2>🎉 صندوق المفاجآت 🎉</h2>
+  <p>اضغطي على كل هدية وافتحي المفاجأة اللي جواها.</p>
+  <div class="grid">
+   <div class="surprise"><span class="emoji">💌</span><strong>رسالة حلوة</strong><button onclick="reveal('r1')">افتحي الرسالة</button><div class="reveal" id="r1">أتمنى ضحكتك تفضل منوّرة أيامك، وكل حاجة بتتمنيها تقرّب منك يوم بعد يوم. 💗</div></div>
+   <div class="surprise"><span class="emoji">🌷</span><strong>باقة ورد افتراضية</strong><button onclick="reveal('r2')">استلمي الورد</button><div class="reveal" id="r2">🌷🌸🌹🌼💐<br>كل وردة معاها دعوة ليكي بفرحة وراحة بال وأيام جميلة.</div></div>
+   <div class="surprise"><span class="emoji">⭐</span><strong>أمنية ليكي</strong><button onclick="reveal('r3')">اعرفي أمنيتك</button><div class="reveal" id="r3">أتمنى السنة دي تجيبلك خبر يفرّح قلبك، وحلم كنتِ مستنياه يتحقق في أحلى وقت. ⭐</div></div>
+   <div class="surprise"><span class="emoji">🍰</span><strong>تورتة عيد الميلاد</strong><button onclick="reveal('r4')">اطلبي أمنية</button><div class="reveal" id="r4">🎂🕯️ خدي نفس، اتمني أمنية من قلبك، واطفي الشمع… يا رب تتحقق! ❤️</div></div>
+  </div>
+  <button class="btn" onclick="go(4)">فيه كمان! 🎊</button>
+ </div>
+</section>
+
+<section class="screen" id="s4">
+ <div class="panel">
+  <h2>💝 شوية أمنيات من القلب</h2>
+  <div class="wish">يا رب سنتك الجديدة تكون مليانة راحة بال، وناس صادقة، وضحك من القلب، ونجاحات تفرّحك.</div>
+  <div class="wish">يا رب كل يوم فيها يكون أحلى من اللي قبله، وكل باب مقفول قدامك يتفتح بالخير.</div>
+  <div class="wish">ويا رب تفضلي دايمًا شايفة قيمتك، وعارفة إنك تستاهلي الحب والفرحة وكل حاجة جميلة. 🌸</div>
+  <button class="btn" onclick="go(5)">آخر مفاجأة ❤️</button>
+ </div>
+</section>
+
+<section class="screen" id="s5">
+ <div class="panel">
+  <span class="big-heart">❤️</span>
+  <h2>قبل ما الهدية تخلص…</h2>
+  <p>أتمنى لما تشوفي الصفحة دي تبتسمي، وتفتكري إن فيه حد حب يعملك حاجة مختلفة مخصوص علشان يفرّحك في يومك.</p>
+  <p>عيد ميلاد سعيد يا نادين، وعقبال سنين كتير كلها خير ونجاح وسعادة. 🎂✨</p>
+  <button class="btn" onclick="go(6)">افتحي آخر صفحة 💌</button>
+ </div>
+</section>
+
+<section class="screen" id="s6">
+ <div class="panel">
+  <span class="gift-box">💌</span>
+  <h2>هدية من القلب ♥️</h2>
+  <p>لأجمل نادين،<br>أتمنى تكون الهدية دي رسمت ولو ابتسامة صغيرة على وشك. كل سنة وإنتِ طيبة، وربنا يجعل أيامك كلها فرح وطمأنينة ويحققلك اللي بتتمنيه.</p>
+  <div class="signature">هدية من القلب ♥️<br>صديقك ESLAM</div>
+  <p class="small">اتعملت مخصوص علشانك يا نادين 🎀</p>
+  <button class="btn secondary" onclick="go(1)">ابدئي الرحلة من الأول ↻</button>
+ </div>
+</section>
+
+<script>
+let current=1;
+function go(n){
+ document.getElementById('s'+current).classList.remove('active');
+ current=n;
+ document.getElementById('s'+current).classList.add('active');
+ document.getElementById('progress').style.width=((n-1)/5*100)+'%';
+ window.scrollTo({top:0,behavior:'smooth'});
+ for(let i=0;i<8;i++) confetti();
+}
+function reveal(id){document.getElementById(id).classList.toggle('show');for(let i=0;i<5;i++) confetti();}
+function confetti(){
+ const el=document.createElement('span');el.className='float';
+ const items=['💖','✨','💕','🌸','🎉','⭐'];
+ el.textContent=items[Math.floor(Math.random()*items.length)];
+ el.style.left=Math.random()*100+'%';el.style.animationDuration=(3+Math.random()*3)+'s';
+ el.style.fontSize=(16+Math.random()*22)+'px';
+ document.getElementById('floating').appendChild(el);
+ setTimeout(()=>el.remove(),6500);
+}
+setInterval(()=>{if(Math.random()>.45)confetti()},1300);
+</script>
+</body>
+</html>
