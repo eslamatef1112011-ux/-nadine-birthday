@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffedf4">
+<title>هدية عيد ميلاد نادين ❤️</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  background: linear-gradient(135deg, #fff0f5, #f9e3ff, #ffe7e7);
+  color: #61334c;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 30px 18px;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  background: linear-gradient(145deg, #ffdae9, #f4d9ff, #fff0dc);
+}
+
+.gift {
+  font-size: 100px;
+  animation: float 2s ease-in-out infinite;
+}
+
+h1 {
+  font-size: 35px;
+  color: #d63384;
+  margin: 18px 0;
+}
+
+h2 {
+  color: #c52c79;
+  font-size: 27px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 2;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  padding: 15px 25px;
+  margin: 10px 5px;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff5c9a, #c44dff);
+  color: white;
+  box-shadow: 0 5px 15px #d6338440;
+}
+
+button:active {
+  transform: scale(.96);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.card {
+  background: #ffffffd9;
+  border-radius: 24px;
+  padding: 24px 18px;
+  margin: 20px auto;
+  max-width: 480px;
+  box-shadow: 0 8px 25px #b54a7920;
+  border: 1px solid #ffffff;
+}
+
+.heart {
+  font-size: 45px;
+  animation: beat 1s infinite;
+}
+
+.surprise {
+  background: white;
+  color: #bd3475;
+  width: 100%;
+  max-width: 340px;
+  margin: 12px auto;
+  border: 2px dashed #f3a2c6;
+  box-shadow: none;
+}
+
+.message {
+  background: #fff0f7;
+  padding: 18px;
+  border-radius: 18px;
+  margin-top: 12px;
+  line-height: 2;
+  font-size: 17px;
+  animation: appear .5s ease;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 480px;
+  margin: 20px auto;
+}
+
+.gallery div {
+  background: white;
+  padding: 18px 8px;
+  border-radius: 18px;
+  font-size: 17px;
+  box-shadow: 0 4px 12px #b54a7915;
+}
+
+footer {
+  background: linear-gradient(135deg, #7b2460, #bd4389);
+  color: white;
+  padding: 40px 18px;
+  border-radius: 35px 35px 0 0;
+}
+
+footer h2 {
+  color: #ffe0ed;
+}
+
+.small {
+  font-size: 14px;
+}
+
+#confetti {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.particle {
+  position: absolute;
+  top: -30px;
+  animation: fall linear forwards;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 380px) {
+  h1 { font-size: 29px; }
+  h2 { font-size: 23px; }
+  p { font-size: 16px; }
+}
+</style>
+</head>
+
+<body>
+
+<div id="confetti"></div>
+
+<!-- الصفحة الأولى: هدية عيد الميلاد -->
+<section class="hero" id="welcome">
+
+  <div class="gift">🎁</div>
+
+  <h1>في هدية مخصوص ليكي يا نادين ❤️</h1>
+
+  <p>
+    النهارده مش يوم عادي خالص... 🎂<br>
+    لأن فيه إنسانة جميلة تستاهل الفرحة كلها!
+  </p>
+
+  <p>مستعدة تفتحي مفاجأتك؟ 🥹💗</p>
+
+  <button onclick="openGift()">
+    افتحي هديتك يا نادين 🎀
+  </button>
+
+  <p class="small">معمول مخصوص علشانك بكل حب ❤️</p>
+
+</section>
+
+<!-- محتوى الهدية -->
+<main id="birthday" class="hidden">
+
+  <section>
+    <div class="heart">💖</div>
+
+    <h1>كل سنة وإنتِ طيبة يا نادين! 🎂</h1>
+
+    <div class="card">
+      <p>
+        النهارده يوم مميز، لأنه اليوم اللي بنحتفل فيه
+        بوجود إنسانة تستاهل كل الخير والسعادة. ❤️
+      </p>
+
+      <p>
+        أتمنى أيامك الجاية تكون مليانة ضحك ونجاح،
+        وأحلام تتحقق، وذكريات جميلة تفضلي فاكرها
+        بكل حب. 🌷
+      </p>
+
+      <p><strong>عيد ميلاد سعيد يا نادين! 🎉</strong></p>
+    </div>
+  </section>
+
+  <!-- مفاجأة أولى -->
+  <section>
+    <h2>🎀 أول مفاجأة ليكي</h2>
+
+    <div class="card">
+      <div style="font-size:60px">💌</div>
+
+      <p>في رسالة صغيرة مستنياكي...</p>
+
+      <button onclick="reveal('letter')">
+        افتحي الرسالة ❤️
+      </button>
+
+      <div id="letter" class="message hidden">
+        يا نادين، أتمنى من قلبي إن السنة الجديدة
+        من عمرك تكون بداية لكل حاجة حلوة،
+        وإن الفرحة تزور قلبك كل يوم،
+        وإنك تفضلي دايمًا مبتسمة ومحققة
+        كل اللي بتتمنيه. 🌸💗
+      </div>
+    </div>
+  </section>
+
+  <!-- مفاجأة ثانية -->
+  <section>
+    <h2>🎁 اختاري هديتك الجاية</h2>
+
+    <p>كل هدية وراها مفاجأة صغيرة ليكي! 🥰</p>
+
+    <button class="surprise" onclick="reveal('gift1')">
+      🎁 الهدية الأولى
+    </button>
+
+    <div id="gift1" class="message hidden">
+      🌷 أتمنالك راحة بال تخلّي قلبك مطمن،
+      وأيام جميلة تعوّضك عن أي تعب،
+      وضحكة متفارقش وشك أبدًا.
+    </div>
+
+    <button class="surprise" onclick="reveal('gift2')">
+      🎁 الهدية الثانية
+    </button>
+
+    <div id="gift2" class="message hidden">
+      ✨ أتمنالك نجاح أكبر من أحلامك،
+      وفرص حلوة تفتحلك أبواب جديدة،
+      وتوفيق في كل خطوة تاخديها.
+    </div>
+
+    <button class="surprise" onclick="reveal('gift3')">
+      🎁 الهدية الثالثة
+    </button>
+
+    <div id="gift3" class="message hidden">
+      💖 أتمنالك ناس صادقة حواليكي،
+      يحبوا يشوفوكي مبسوطة،
+      ويشاركوا معاكي أجمل لحظات حياتك.
+    </div>
+
+    <button class="surprise" onclick="reveal('gift4')">
+      🎁 الهدية الرابعة
+    </button>
+
+    <div id="gift4" class="message hidden">
+      🦋 أتمنالك بداية جديدة مليانة أمل،
+      وشجاعة تحققي بيها أحلامك،
+      وإيمان إن الأحلى لسه جاي.
+    </div>
+
+  </section>
+
+  <!-- مفاجأة ثالثة -->
+  <section>
+    <h2>💝 صندوق الأمنيات</h2>
+
+    <div class="card">
+      <div style="font-size:65px">🌟</div>
+
+      <p>
+        تخيلي إن عندك أمنية واحدة تتحقق
+        النهارده... يا ترى هتتمني إيه؟
+      </p>
+
+      <button onclick="wish()">اضغطي علشان أمنيتك ✨</button>
+
+      <div id="wishMessage" class="message hidden">
+        يا رب كل أمنية حلوة في قلبك تقرّب من التحقيق،
+        وتلاقي الخير في كل طريق تمشي فيه. 🤍
+      </div>
+    </div>
+  </section>
+
+  <!-- مفاجأة رابعة -->
+  <section>
+    <h2>🌸 أربع حاجات أتمنّاهم ليكي</h2>
+
+    <div class="gallery">
+      <div>❤️ حب وخير</div>
+      <div>🌷 راحة بال</div>
+      <div>✨ نجاح وتوفيق</div>
+      <div>🦋 فرحة متتنساش</div>
+      <div>🎂 أيام جميلة</div>
+      <div>💖 ضحكة دايمة</div>
+    </div>
+  </section>
+
+  <!-- كارت خاص -->
+  <section>
+    <h2>💌 في كلام أخير ليكي...</h2>
+
+    <div class="card">
+      <p>
+        يمكن الهدية دي بسيطة، لكن الفكرة منها
+        إنها ترسم ابتسامة على وشك،
+        وتفكرك إن يوم ميلادك مناسبة تستاهل
+        تتفرحي بيها من قلبك. 🥹
+      </p>
+
+      <p>
+        أتمنى تفضلي دايمًا فخورة بنفسك،
+        ومؤمنة إنك تستاهلي كل حاجة جميلة.
+        وكل سنة وإنتِ أقرب لأحلامك. 🌹
+      </p>
+
+      <button onclick="reveal('finalMessage')">
+        افتحي آخر مفاجأة ❤️
+      </button>
+
+      <div id="finalMessage" class="message hidden">
+        🎉 مفاجأة عيد ميلاد سعيدة يا نادين! 🎉
+
+        <br><br>
+
+        أتمنى السنة دي تكون أحلى سنة،
+        وتكون بداية لحكايات جميلة وذكريات
+        تفضلي تبتسمي كل ما تفتكريها. 💗
+
+        <br><br>
+
+        كل سنة وإنتِ طيبة وبخير وسعادة. 🎂
+      </div>
+    </div>
+  </section>
+
+  <!-- الصفحة الأخيرة: إهداء إسلام -->
+  <footer id="myGift">
+
+    <div style="font-size:65px">❤️🎁❤️</div>
+
+    <h2>هدية من القلب ♥️</h2>
+
+    <p>
+      إلى نادين...<br>
+
+      أتمنى تكون الهدية دي قدرت ترسم
+      ابتسامة جميلة على وشك. 🌷
+    </p>
+
+    <p>
+      كل سنة وإنتِ طيبة، وكل سنة
+      وأيامك مليانة خير وفرحة ونجاح. 💖
+    </p>
+
+    <div style="
+      background:#ffffff20;
+      border-radius:20px;
+      padding:22px;
+      margin:25px auto;
+      max-width:400px;
+    ">
+
+      <p>مع أطيب الأمنيات وأجمل التهاني ❤️</p>
+
+      <h2>صديقك ESLAM</h2>
+
+      <div style="font-size:35px">💌🌹✨</div>
+
+    </div>
+
+    <p class="small">
+      صُنعت هذه الهدية خصيصًا لعيد ميلاد نادين ❤️
+    </p>
+
+    <button onclick="celebrate()">
+      احتفلي بعيد ميلادك! 🎉
+    </button>
+
+  </footer>
+
+</main>
+
+<script>
+function openGift() {
+  document.getElementById("welcome").classList.add("hidden");
+
+  document.getElementById("birthday").classList.remove("hidden");
+
+  window.scrollTo(0, 0);
+
+  celebrate();
+}
+
+function reveal(id) {
+  const element = document.getElementById(id);
+
+  if (!element) return;
+
+  element.classList.toggle("hidden");
+
+  if (!element.classList.contains("hidden")) {
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest"
+    });
+  }
+}
+
+function wish() {
+  const message = document.getElementById("wishMessage");
+
+  message.classList.remove("hidden");
+
+  celebrate();
+}
+
+function celebrate() {
+  const container = document.getElementById("confetti");
+
+  const symbols = ["💖", "❤️", "✨", "🌸", "🎉", "💕"];
+
+  for (let i = 0; i < 30; i++) {
+    const particle = document.createElement("span");
+
+    particle.className = "particle";
+
+    particle.textContent =
+      symbols[Math.floor(Math.random() * symbols.length)];
+
+    particle.style.left = Math.random() * 100 + "%";
+
+    particle.style.animationDuration =
+      (3 + Math.random() * 4) + "s";
+
+    particle.style.fontSize =
+      (16 + Math.random() * 20) + "px";
+
+    container.appendChild(particle);
+
+    setTimeout(function() {
+      particle.remove();
+    }, 7500);
+  }
+}
+</script>
+
+</body>
+</html>
